@@ -27,6 +27,25 @@ export default {
     deleteNinja: function(){
       this.ninjas.pop();
     }
+  },
+  // lifecycle hooks
+  beforeCreate(){
+    console.log('beforeCreate');
+  },
+  created(){
+    console.log('created'); //good for fetching data i.e. from database
+  },
+  beforeMount(){
+    console.log('beforeMount');
+  },
+  mounted(){
+    console.log('mounted');
+  },
+  beforeUpdate(){
+    console.log('beforeUpdate');
+  },
+  updated(){
+    console.log('updated');
   }
 }
 </script>

@@ -11,11 +11,11 @@ export default {
   props: {
     title: {
       type: String
+      , default: 'Vue Ninjas'
     }
   },
   data() {
-    return {
-      title: 'Vue Ninjas'
+    return {    
     }
   },
   methods: {
