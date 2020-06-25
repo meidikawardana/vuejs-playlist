@@ -1,5 +1,5 @@
 <template>
-  <div v-theme:column="'narrow'" id="show-blogs">
+  <div id="show-blogs">
     <h1>All Blog Articles</h1>
     <input type="text" v-model="search" placeholder="search blogs" />
     <div v-for="blog in filteredBlogs" class="single-blog">
@@ -32,6 +32,18 @@ export default {
       return this.blogs.filter((blog) => {
         return blog.title.match(this.search);
       });
+    }
+  },
+  filters: {
+    toUppercase(value){
+      return value.toUpperCase();
+    },
+  },
+  directives: {
+    'rainbow': {
+      bind(el, binding, vnode){
+        el.style.color = "#" + Math.random().toString().slice(2,8);
+      }
     }
   }
 }
